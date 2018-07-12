@@ -155,16 +155,16 @@ $(document).ready(function () {
     }
     function diagnóstico() {
         $(".title").html("Tu Diagnóstico<span class='tipeo'>&#160;</span>");    
-        if(acumulado > 0 && acumulado <= 50){
-            respuesta = "Tiene una gripe Común! <br> Consuma bebidas y calientes <br> y visite un Médico";    
+       if (acumulado > 0 && acumulado <= 50) {
+            respuesta = "Tiene una gripe Común! - (Virus B) <br><br>TRATAMIENTO<br><br>*Consuma bebidas calientes.<br>*Visite un médico.";
             intensidad = "normal";
         }
         if (acumulado > 50 && acumulado <= 70) {
-            respuesta = "Tiene una gripe Intensa! <br> Es conveniente que <br> visite un Médico";
+            respuesta = "Tiene una gripe Intensa! - (Virus AH3N2) <br><br>TRATAMIENTO<br><br>*Visite un médico.<br>*Oseltamivir.";
             intensidad = "intenso";
         }
-        if (acumulado > 70 ) {
-            respuesta = "Tiene una gripe Muy Intensa! <br> Visite un Médico con Urgencia";
+        if (acumulado > 70) {
+            respuesta = "Tiene una gripe Muy Intensa! - (Virus AH1N1) <br><br>TRATAMIENTO<br><br>*Visite un médico con urgencia.<br>*Oseltamivir.";
             intensidad = "muy-intenso";
         }
         $("#respuestaSistema").html(respuesta);
