@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/materialize.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/site.css">
+        <link rel="icon" type="image/png" href="img/icon-120.png" />
+    <title>Sistema Experto</title>
+</head>
+<body>
+
+    <nav >
+        <div class="nav-wrapper back-medium">
+            <a href="#!" class="brand-logo">
+                <img width="25px" src="images/almacen-ico.png" alt="">
+            </a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="side-nav fixed" id="mobile-demo">
+                <li>
+                    <div class="user-view back-dark">
+                        <a href="#!user">
+                            <img class="circle" src="img/user_icon.png">
+                        </a>
+                        <a href="#!name">
+                            <span class="white-text name"></span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="index.html">
+                    <i class="material-icons">home</i>INICIO</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+        <div class="contenedor">
+            <div class=" " id="content-login">
+        
+            </div>
+            <div class="user-login">
+                <div class="container row">
+                    <div class="col s12 banner-login">
+                        <img class="circle animated zoomIn img-doctor" src="img/icon-login.png" alt="">
+                        <div class="ask-name animated zoomInDown">
+                            <h2 class="title ">¿Cuál es tu sexo?<span class="tipeo">&#160;</span></h2>
+                        </div>
+                    </div>
+                    <div class="row form-name no-margin animated bounceIn">
+                        <div class="row no-margin" id="optionSex">
+                            <div class="col s6 center">
+                                <a class="waves-effect waves-light image-sex circle" id="sWoman">
+                                    <img class="img-sexo" src="img/girl.png" alt="">
+                                </a> 
+                                <span class="tag">Mujer</span>                              
+                            </div>
+                            <div class="col s6 center">
+                                <a class="waves-effect waves-light image-sex circle" id="sMan">
+                                    <img class="img-sexo" src="img/man.png" alt="">
+                                </a>
+                                <span class="tag">Hombre</span>
+                            </div>
+                        </div>
+                        <div class="input-field col s12 ocultar" id="text-nombre">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input  id ="nombreUser" type="text" class="validate">
+                            <label for="nombreUser">Nombre Completo</label>
+                        </div>
+                        <div class="input-field col s12 ocultar" id="text-edad">
+                            <i class="material-icons prefix">card_giftcard</i>
+                            <input id="edadUser" maxlength="2" type="text" class="validate">
+                            <label for="edadUser">Edad</label>
+                        </div>
+                        <div class="row ocultar" id="askEmbarazo">
+                            <div class="col s12 center">
+                                    <img class="img-embarazo" src="img/embarazada.png" alt="">
+                            </div>
+                            <div class="col s12 center">
+                                <a class="waves-effect waves-light btn gradiente-1" id="siEmbarazada"><i class="material-icons right">thumb_up</i>Si </a>
+                                <a class="waves-effect waves-light btn gradiente-1" id="noEmbarazada"><i class="material-icons right">thumb_down</i>No</a>
+                            </div>
+                        </div>
+                        <div class="row no-margin ocultar" id="askEnfermedad">
+                            <div class="col s4 center">
+                                <a class="waves-effect waves-dark circle enfermedad" id="sAsma">
+                                    <img class="img-enfermedad" src="img/asma.png" alt="">
+                                </a>
+                                <span class="tag">Asma</span>   
+                            </div>
+                            <div class="col s4 center">
+                                <a class="waves-effect waves-dark circle enfermedad" id="sDiabetes">
+                                    <img class="img-enfermedad" src="img/diabetes.png" alt="">
+                                </a>
+                                <span class="tag">Diabetes</span>   
+                            </div>
+                            <div class="col s4 center">
+                                <a class="waves-effect waves-dark circle enfermedad" id="sSida">
+                                    <img class="img-enfermedad" src="img/sida.png" alt="">
+                                </a>
+                                <span class="tag">Sida</span>   
+                            </div>
+                            <div class="col s4 center">
+                                <a class="waves-effect waves-dark circle enfermedad" id="sCancer">
+                                    <img class="img-enfermedad" src="img/cancer.png" alt="">
+                                </a>
+                                <span class="tag">Cancer</span>   
+                            </div>                 
+                            <div class="col s4 center">
+                                <a class="waves-effect waves-dark circle enfermedad" id="sOtros">
+                                    <img class="img-enfermedad" src="img/otros.png" alt="">
+                                </a>
+                                <span class="tag">Otro</span>
+                            </div>
+                            <div class="col s4 center">
+                                <a class="waves-effect waves-dark circle enfermedad" id="sNinguno">
+                                    <img class="img-enfermedad" src="img/ninguno.png" alt="">
+                                </a>
+                                <span class="tag">Ninguno</span>
+                            </div>
+                        </div>
+                        <div class="row no-margin ocultar" id="askSintomas">
+                            <div class="col s6 l2 center">
+                                <a class="waves-effect waves-dark circle sintoma" id="sDolorGarganta">
+                                    <img class="img-sintoma" src="img/dolor-garganta.png" alt="">
+                                </a>
+                                <span class="tag">Dolor/Garganta</span>
+                                <p class="sintomaInten">
+                                    <input name="group1" type="radio" value="0" id="sNoGarganta" checked="checked" />
+                                    <label for="sNoGarganta">No</label>
+                                </p>                               
+                                <p class="sintomaInten">
+                                    <input name="group1" type="radio" value="5" id="sLeveGarganta"  />
+                                    <label for="sLeveGarganta">Leve</label>
+                                </p>
+                                <p class="sintomaInten">
+                                    <input name="group1" type="radio" value="10" id="sIntensoGarganta" />
+                                    <label for="sIntensoGarganta">Intenso</label>
+                                </p>
+                            </div>
+                            <div class="col s6 l2 center">
+                                <a class="waves-effect waves-dark circle sintoma" id="sMalestar">
+                                    <img class="img-sintoma" src="img/malestar.png" alt="">
+                                </a>
+                                <span class="tag">Malestar </span>
+                                <p class="sintomaInten">
+                                    <input name="group2" type="radio" value="0" id="sNoMalestar" checked="checked"/>
+                                    <label for="sNoMalestar">No</label>
+                                </p>
+                                <p class="sintomaInten">
+                                    <input name="group2" type="radio" value="5" id="sLeveMalestar" />
+                                    <label for="sLeveMalestar">Leve</label>
+                                </p>
+                                <p class="sintomaInten">
+                                    <input name="group2" type="radio" value="10" id="sIntensoMalestar" />
+                                    <label for="sIntensoMalestar">Intenso</label>
+                                </p>
+                            </div>
+                            <div class="col s6 l2 center">
+                                <a class="waves-effect waves-dark circle sintoma" id="sEscalofrio">
+                                    <img class="img-sintoma" src="img/escalofrio.png" alt="">
+                                </a>
+                                <span class="tag">Escalofrio</span>
+                                <p class="sintomaInten">
+                                    <input name="group3" type="radio" value="0" id="sNoEscalofrio" checked="checked"/>
+                                    <label for="sNoEscalofrio">No</label>
+                                </p>
+                                <p class="sintomaInten">
+                                    <input name="group3" type="radio" value="5" id="sLeveEscalofrio"/>
+                                    <label for="sLeveEscalofrio">Leve</label>
+                                </p>
+                                <p class="sintomaInten">
+                                    <input name="group3" type="radio" value="10" id="sIntensoEscalofrio" />
+                                    <label for="sIntensoEscalofrio">Intenso</label>
+                                </p>
+                            </div>
+                            <div class="col s6 l2 center">
+                                <a class="waves-effect waves-dark circle sintoma" id="sTos">
+                                    <img class="img-sintoma" src="img/tos.png" alt="">
+                                </a>
+                                <span class="tag">Tos</span>
+                                <p class="sintomaInten">
+                                    <input name="group4" type="radio" value="0" id="sNoTos" checked="checked"/>
+                                    <label for="sNoTos">No</label>
+                                </p>
+                                <p class="sintomaInten">
+                                    <input name="group4" type="radio" value="5" id="sLeveTos" />
+                                    <label for="sLeveTos">Leve</label>
+                                </p>
+                                <p class="sintomaInten">
+                                    <input name="group4" type="radio" value="10" id="sIntensoTos" />
+                                    <label for="sIntensoTos">Intenso</label>
+                                </p>
+                            </div>
+                            <div class="col s6 l2 center">
+                                <a class="waves-effect waves-dark circle sintoma" id="sCongestion">
+                                    <img class="img-sintoma" src="img/congestion.png" alt="">
+                                </a>
+                                <span class="tag">Congestion</span>
+                                <p class="sintomaInten">
+                                    <input name="group5" type="radio" value="0" id="sNoCongestion" checked="checked"/>
+                                    <label for="sNoCongestion">No</label>
+                                </p>
+                                <p class="sintomaInten">
+                                    <input name="group5" type="radio" value="5" id="sLeveCongestion"/>
+                                    <label for="sLeveCongestion">Leve</label>
+                                </p>
+                                <p class="sintomaInten">
+                                    <input name="group5" type="radio" value="10" id="sIntensoCongestion" />
+                                    <label for="sIntensoCongestion">Intenso</label>
+                                </p>
+                            </div>
+                            <div class="col s6 l2 center">
+                                <a class="waves-effect waves-dark circle sintoma" id="sFiebre">
+                                    <img class="img-sintoma" src="img/fiebre.png" alt="">
+                                </a>
+                                <span class="tag">Fiebre</span>
+                                <p class="sintomaInten">
+                                    <input name="group6" type="radio" value="0" id="sNoFiebre" checked="checked"/>
+                                    <label for="sNoFiebre">No</label>
+                                </p>
+                                <p class="sintomaInten">
+                                    <input name="group6" type="radio" value="5" id="sLeveFiebre" />
+                                    <label for="sLeveFiebre">Leve</label>
+                                </p>
+                                <p class="sintomaInten">
+                                    <input name="group6" type="radio" value="10" id="sIntensoFiebre" />
+                                    <label for="sIntensoFiebre">Intenso</label>
+                                </p>
+                            </div>
+                            <div class="col s6 l2 center">
+                                <a class="waves-effect waves-dark circle sintoma" id="sDolorCabeza">
+                                    <img class="img-sintoma" src="img/dolor-cabeza.png" alt="">
+                                </a>
+                                <span class="tag">Dolor/Cabeza</span>
+                                <p class="sintomaInten">
+                                    <input name="group7" type="radio" value="0" id="sNoCabeza" checked="checked"/>
+                                    <label for="sNoCabeza">No</label>
+                                </p>
+                                <p class="sintomaInten">
+                                    <input name="group7" type="radio" value="5" id="sLeveCabeza" />
+                                    <label for="sLeveCabeza">Leve</label>
+                                </p>
+                                <p class="sintomaInten">
+                                    <input name="group7" type="radio" value="10" id="sIntensoCabeza" />
+                                    <label for="sIntensoCabeza">Intenso</label>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row no-margin ocultar" id="respuestaFinal">
+                            <div class="col s12 l12 center" id="preLoad">
+                                <div class="preloader-wrapper big active" >
+                                    <div class="spinner-layer spinner-blue-only">
+                                        <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="gap-patch">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                            <div class="col s12 l12">
+                                <div class="intensidad animated bounceIn ocultar" id="imgIntensidad">
+
+                                </div>
+                            </div>
+                            <div class="col s12 l12 center">
+                                <h4 id="respuestaSistema" class="animated fadeIn ocultar"></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn-floating btn-large waves-effect waves-light next ocultar" id="next-1">
+                    <i class="material-icons">send</i>
+                </a>
+                <a class="btn-floating btn-large waves-effect waves-light next ocultar" id="next-2">
+                    <i class="material-icons">send</i>
+                </a>
+                <a class="btn-floating btn-large waves-effect waves-light next ocultar" id="next-3">
+                    <i class="material-icons">send</i>
+                </a>
+            </div>
+        
+        </div>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
